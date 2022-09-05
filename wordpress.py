@@ -1,6 +1,7 @@
+# https://hevodata.com/learn/wordpress-python/
+
 import base64
 import requests
-from tqdm.notebook import tqdm
 import json
 
 user = 'admin'  # The username of your WordPress account
@@ -21,4 +22,4 @@ post = {'title': post_title,
         'author': '1',
         'format': 'standard'
         }
-wp_request = requests.post(url +s
+wp_request = requests.post(url + '/posts', headers=headers, json=post)
